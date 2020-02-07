@@ -1,48 +1,172 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <div class="header">
+      <ul class="header-content">
+        <li class="header-item">推荐</li>
+        <li class="header-item">新闻</li>
+        <li class="header-item">娱乐</li>
+        <li class="header-item">体育</li>
+        <li class="header-item">图片</li>
+        <li class="header-item">财经</li>
+      </ul>
+    </div>
+    <div class="banner-content">
+        <img src="../assets/a.png" alt="" class="banner">
+        <p class="banner-title">2017网易时尚跨界书店</p>
+    </div>
+    <div class="news-content">
+      <ul>
+        <li class="news-item">
+          <div class="item-inner">
+            <img src="../assets/a.png" alt="" class="news-img">
+            <p class="news-title">天津市人民政府副秘书长，办公厅党组成员杜强被查</p>
+            <span class="time">1小时前</span>
+            <span class="num">99</span>
+          </div>
+        </li>
+        <li class="news-item">
+          <div class="item-inner">
+            <img src="../assets/a.png" alt="" class="news-img">
+            <p class="news-title">天津市人民政府副秘书长，办公厅党组成员杜强被查</p>
+            <span class="time">1小时前</span>
+            <span class="num">99</span>
+          </div>
+        </li>
+        <li class="news-item">
+          <div class="item-inner">
+            <img src="../assets/a.png" alt="" class="news-img">
+            <p class="news-title">天津市人民政府副秘书长，办公厅党组成员杜强被查</p>
+            <span class="time">1小时前</span>
+            <span class="num">99</span>
+          </div>
+        </li>
+        <li class="news-item">
+          <div class="item-inner">
+            <img src="../assets/a.png" alt="" class="news-img">
+            <p class="news-title">天津市人民政府副秘书长，办公厅党组成员杜强被查</p>
+            <span class="time">1小时前</span>
+            <span class="num">99</span>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
     msg: String
   }
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style  lang='scss'>
+.header {
+  height: px2rem(40px);
+  width: 100%;
+  background:$df;
+  // background: red;
+  padding-left: px2rem(23px);
+  box-sizing: border-box;
+  .header-content{
+    height: px2rem(40px);
+  width: 100%;
+  }
+  .header-item {
+    color: #ffcdce;
+    font-size: px2rem(16px);
+    margin-right: px2rem(20px);
+    float: left;
+    line-height: px2rem(40px);
+    &:nth-child(2) {
+      color: #fff;
+      font-size: px2rem(17px);
+    }
+  }
+}
+.banner-content{
+  position:relative;
+  .banner{
+  display:block;
+  width:100%;
+  height:px2rem(190px);
+  }
+  .banner-title{
+    position:absolute;
+    left:px2rem(15px);
+    bottom:px2rem(15px);
+    font-size: px2rem(16px);
+    color:#fff;
+  }
+}
+.news-content{
+  .news-item{
+    width:100%;
+    height:px2rem(90px);
+    padding-left: px2rem(15px);
+    padding-right: px2rem(15px);
+    box-sizing: border-box;
+  }
+  .item-inner{
+    position:relative;
+    overflow: hidden;
+    height: 100%;
+    border-bottom:px2rem(1px) solid #e5e5e5;
+    
+  }
+  .news-img{float: left;
+    display: block;
+    
+    width:px2rem(95px);
+    height:px2rem(70px);
+    margin-top:px2rem(10px);
+    margin-right:px2rem(15px) ;
+  }
+  .news-title{
+    // width:calc(100% - 105px);
+    // margin-left: px2rem(105px);
+    // float: left;
+    text-align: left;
+    color:#404040;
+    font-size:px2rem(17px);
+    margin-top: px2rem(16px);
+    line-height: px2rem(20px)
+
+  }
+  .time{
+    position:absolute;
+    left: px2rem(115px);
+    bottom: px2rem(14px);
+    color:#888;
+    font-size:px2rem(12px);
+  }
+  .num{
+    position: absolute;
+    right: px2rem(4px);
+     color:#888;
+    font-size:px2rem(12px);
+    bottom:px2rem(14px);
+    &::before{
+      content:'';
+      display: block;
+   position:absolute;
+   background: url('../assets/logo.png');
+   background-size: contain;
+   width:px2rem(13px);
+   height:px2rem(12px);
+  //  top:px2rem(0.5px);
+   left:px2rem(-23px);
+    }
+  }
+}
 h3 {
   margin: 40px 0 0;
+  p {
+    color: red;
+  }
 }
 ul {
   list-style-type: none;
